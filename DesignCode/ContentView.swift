@@ -82,7 +82,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
 
@@ -165,7 +169,7 @@ struct BottomCardView: View {
         .padding(.horizontal,20)
         //将宽度设置为最大宽度
         .frame(maxWidth:.infinity)
-        .background(Color.white)
+        .background(Color("background3"))
         .cornerRadius(30)
         .shadow(radius: 20)
     }
