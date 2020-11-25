@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var show = false
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -22,6 +23,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -140 : -40)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.9)
                 .rotationEffect(.degrees(show ? 0 : 10))
                 .rotation3DEffect(
@@ -37,6 +39,7 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -60 : -20)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 0 : 5))
                 .rotation3DEffect(
@@ -48,14 +51,31 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.2))
             
             CardView()
+                .offset(x: viewState.width, y: viewState.height)
                 .blendMode(.hardLight)
+                //.spring(response 延时，dampingFraction 阻力
+                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
+                //点击事件
                 .onTapGesture {
                     show.toggle()
                 }
+                .gesture(
+                    //拖拽手势
+                    DragGesture().onChanged { value in
+                        //存储位置信息
+                        viewState = value.translation
+                        show = true
+                    }
+                    .onEnded{ value in
+                        viewState = .zero
+                        show = false
+                    }
+                )
             
             BottomCardView()
                 .blur(radius: show ? 20 : 0)
                 .animation(.default)
+                .offset(x: 0.0, y: show ? 2000 : 600)
         }
     }
 }
@@ -148,6 +168,5 @@ struct BottomCardView: View {
         .background(Color.white)
         .cornerRadius(30)
         .shadow(radius: 20)
-        .offset(x: 0, y: 600)
     }
 }
