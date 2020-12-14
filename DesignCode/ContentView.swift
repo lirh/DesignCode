@@ -10,24 +10,35 @@ import SwiftUI
 struct ContentView: View {
     @State var show = false
     @State var viewState = CGSize.zero
+    @State var showCard = false
     
     var body: some View {
         ZStack {
             TitleView()
                 //增加模糊
                 .blur(radius: show ? 20 : 0)
-                .animation(.default)
+                .opacity(showCard ? 0.4 : 1)
+                .offset(y: showCard ? -100 : 0)
+                .animation(
+                    Animation
+                        .default
+                        .delay(0.2)
+//                        .speed(2)
+                )
             
             BackCardView()
+                .frame(width: showCard ? 300 : 340, height: 220)
                 .background(Color("card3"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -140 : -40)
                 .offset(x: viewState.width, y: viewState.height)
-                .scaleEffect(0.9)
+                .offset(y: showCard ? -180 : 0)
+                .scaleEffect(showCard ? 1 : 0.9)
                 .rotationEffect(.degrees(show ? 0 : 10))
+                .rotationEffect(.degrees(showCard ? -10 : 0))
                 .rotation3DEffect(
-                    .degrees(10),
+                    .degrees(showCard ? 0 :10),
                     axis: (x: 10.0, y: 0.0, z: 0.0)
                 )
                 .blendMode(.hardLight)
@@ -35,15 +46,18 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.4))
             
             BackCardView()
+                .frame(width: 340, height: 220)
                 .background(show ? Color("card4") :Color("card1"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -60 : -20)
                 .offset(x: viewState.width, y: viewState.height)
-                .scaleEffect(0.95)
+                .offset(y: showCard ? -140 : 0)
+                .scaleEffect(showCard ? 1 : 0.95)
                 .rotationEffect(Angle(degrees: show ? 0 : 5))
+                .rotationEffect(.degrees(showCard ? -5 : 0))
                 .rotation3DEffect(
-                    .degrees(5),
+                    .degrees(showCard ? 0 : 5),
                     axis: (x: 10.0, y: 0.0, z: 0.0)
                 )
                 .blendMode(.hardLight)
@@ -51,13 +65,19 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.2))
             
             CardView()
+                .frame(width: showCard ? 375 : 340, height: 220)
+                .background(Color.black)
+//                .cornerRadius(20)
+                .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 : 20, style: .continuous))
+                .shadow(radius: 20)
                 .offset(x: viewState.width, y: viewState.height)
+                .offset(y: showCard ? -100 : 0)
                 .blendMode(.hardLight)
                 //.spring(response 延时，dampingFraction 阻力
                 .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
                 //点击事件
                 .onTapGesture {
-                    show.toggle()
+                    showCard.toggle()
                 }
                 .gesture(
                     //拖拽手势
@@ -73,9 +93,11 @@ struct ContentView: View {
                 )
             
             BottomCardView()
+                .offset(x: 0.0, y: showCard ? 80 : 300)
+                .offset(x: 0.0, y: show ? 3000 : 300)
                 .blur(radius: show ? 20 : 0)
-                .animation(.default)
-                .offset(x: 0.0, y: show ? 2000 : 600)
+                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                
         }
     }
 }
@@ -118,10 +140,7 @@ struct CardView: View {
                 //设置图片容器大小
                 .frame(width: 300, height: 110, alignment: .top)
         }
-        .frame(width: 340, height: 220)
-        .background(Color.black)
-        .cornerRadius(20)
-        .shadow(radius: 20)
+       
     }
 }
 
@@ -130,7 +149,7 @@ struct BackCardView: View {
         VStack {
             Spacer()
         }
-        .frame(width: 340, height: 220)
+       
     }
 }
 
