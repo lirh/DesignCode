@@ -35,7 +35,7 @@ struct MenuView: View {
             .frame(maxWidth: .infinity)
             //高度
             .frame(height: 300)
-            .background(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.8705882353, green: 0.8941176471, blue: 0.9450980392, alpha: 1))]), startPoint: .top, endPoint: .bottom))
+            .background(LinearGradient(gradient: Gradient(colors: [Color("background1"), Color("background3")]), startPoint: .top, endPoint: .bottom))
             //圆角矩形切割
             .clipShape(RoundedRectangle(cornerRadius: 30, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)

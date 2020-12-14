@@ -13,7 +13,7 @@ struct Home: View {
     var body: some View {
         ZStack {
             //设置根视图的背景颜色，而不是在外层利用background 确保背景颜色只用于根视图
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+            Color("background2")
                 //禁用安全区域
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
@@ -21,6 +21,7 @@ struct Home: View {
                 HStack {
                     Text("Watching")
                         .font(.system(size: 28, weight: .bold))
+                        .foregroundColor(Color("secondary"))
                     
                     Spacer()
                     
@@ -40,7 +41,7 @@ struct Home: View {
             }
             //移出安全区域
             .padding(.top, 44)
-            .background(Color.white)
+            .background(Color("background1"))
             //圆角矩形切割
             .clipShape(RoundedRectangle(cornerRadius: 30, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 20)
@@ -63,5 +64,7 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+        Home()
+                      .preferredColorScheme(.dark)
     }
 }
