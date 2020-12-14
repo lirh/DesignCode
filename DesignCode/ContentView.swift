@@ -120,6 +120,8 @@ struct ContentView: View {
                             } else {
                                 bottomState = CGSize.zero
                                 showFull = false
+
+
                             }
                           
                         }
