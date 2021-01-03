@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @Binding var showProfile: Bool
+    @State var showUpdate = false
     
     var body: some View {
         VStack {
@@ -20,6 +21,24 @@ struct HomeView: View {
                 Spacer()
                 
                 AvatarView(showProfile: $showProfile)
+                
+                Button(action: {
+                    showUpdate.toggle()
+                }) {
+                    Image(systemName: "bell")
+                        .renderingMode(.original)
+                        .font(.system(size: 16, weight: .medium))
+                        .frame(width: 36, height: 36)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .shadow(color: Color.black.opacity(0.1), radius: 1, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 1)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10)
+                        
+                }
+                .sheet(isPresented: $showUpdate, content: {
+                    ContentView()
+                })
+                
             }
             .padding(.horizontal)
             .padding(.top, 30)
