@@ -13,6 +13,7 @@
 		CD35719725641D3E00E03989 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD35719625641D3E00E03989 /* Preview Assets.xcassets */; };
 		CDED27592587AB4700EC61CA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED27582587AB4700EC61CA /* MenuView.swift */; };
 		CDED275D2587B36C00EC61CA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED275C2587B36C00EC61CA /* Home.swift */; };
+		CDF7A32625A17D0400EDC3C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF7A32525A17D0400EDC3C2 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CD35719825641D3E00E03989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDED27582587AB4700EC61CA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CDED275C2587B36C00EC61CA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CDF7A32525A17D0400EDC3C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CD35718F25641D3D00E03989 /* DesignCodeApp.swift */,
 				CD35719125641D3D00E03989 /* ContentView.swift */,
 				CDED275C2587B36C00EC61CA /* Home.swift */,
+				CDF7A32525A17D0400EDC3C2 /* HomeView.swift */,
 				CDED27582587AB4700EC61CA /* MenuView.swift */,
 				CD35719325641D3E00E03989 /* Assets.xcassets */,
 				CD35719825641D3E00E03989 /* Info.plist */,
@@ -147,6 +150,7 @@
 				CD35719225641D3D00E03989 /* ContentView.swift in Sources */,
 				CDED27592587AB4700EC61CA /* MenuView.swift in Sources */,
 				CDED275D2587B36C00EC61CA /* Home.swift in Sources */,
+				CDF7A32625A17D0400EDC3C2 /* HomeView.swift in Sources */,
 				CD35719025641D3D00E03989 /* DesignCodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
