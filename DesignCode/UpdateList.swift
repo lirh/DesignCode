@@ -11,7 +11,7 @@ struct UpdateList: View {
     var body: some View {
         NavigationView {
             List(updateData) { update in
-                NavigationLink(destination: Text(update.text)) {
+                NavigationLink(destination: UpdateDetail(update: update)) {
                     VStack(alignment: .leading) {
                         Text(update.title)
                             .font(.system(size: 20, weight: .bold))
@@ -38,8 +38,6 @@ struct UpdateList: View {
                                     .foregroundColor(.secondary)
                             }
                         }
-
-
                     }
                 }
             }
@@ -51,6 +49,7 @@ struct UpdateList: View {
 struct UpdateList_Previews: PreviewProvider {
     static var previews: some View {
         UpdateList()
+//            .preferredColorScheme(.dark)
     }
 }
 
