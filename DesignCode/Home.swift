@@ -66,20 +66,6 @@ struct Home_Previews: PreviewProvider {
     }
 }
 
-struct AvatarView: View {
-    @Binding var showProfile: Bool
-    
-    var body: some View {
-        Button(action: { showProfile.toggle() }) {
-            Image("Avatar")
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 36, height: 36)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            
-        }
-    }
-}
 
 
 let screen = UIScreen.main.bounds
