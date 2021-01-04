@@ -187,8 +187,7 @@ struct TitleView: View {
         VStack {
             HStack {
                 Text("Certificates")
-                    .font(.largeTitle)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .modifier(CustomFontModifier(size: 34))
                 Spacer()
             }
             .padding()

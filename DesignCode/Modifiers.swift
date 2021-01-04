@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK: 双重阴影
 struct ShaodowMidifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -15,6 +16,7 @@ struct ShaodowMidifier: ViewModifier {
     }
 }
 
+//MARK: 文字样式
 struct FontModifier: ViewModifier {
     var style: Font.TextStyle = .body
     func body(content: Content) -> some View {
@@ -23,6 +25,7 @@ struct FontModifier: ViewModifier {
     }
 }
 
+//MARK: 文字字体
 struct CustomFontModifier: ViewModifier {
     var size: CGFloat = 28
     func body(content: Content) -> some View {
