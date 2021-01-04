@@ -15,6 +15,7 @@
 		CDBE598825A1BFAE003A0C7A /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE598725A1BFAE003A0C7A /* UpdateDetail.swift */; };
 		CDBE598B25A1C422003A0C7A /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE598A25A1C422003A0C7A /* UpdateStore.swift */; };
 		CDBE598F25A1DD91003A0C7A /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE598E25A1DD91003A0C7A /* TopBar.swift */; };
+		CDE3F4A725A377A4003900CD /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3F4A625A377A4003900CD /* Modifiers.swift */; };
 		CDED27592587AB4700EC61CA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED27582587AB4700EC61CA /* MenuView.swift */; };
 		CDED275D2587B36C00EC61CA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDED275C2587B36C00EC61CA /* Home.swift */; };
 		CDF7A32625A17D0400EDC3C2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF7A32525A17D0400EDC3C2 /* HomeView.swift */; };
@@ -33,6 +34,7 @@
 		CDBE598725A1BFAE003A0C7A /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		CDBE598A25A1C422003A0C7A /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		CDBE598E25A1DD91003A0C7A /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		CDE3F4A625A377A4003900CD /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		CDED27582587AB4700EC61CA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		CDED275C2587B36C00EC61CA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CDF7A32525A17D0400EDC3C2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				CD35718F25641D3D00E03989 /* DesignCodeApp.swift */,
 				CD35719125641D3D00E03989 /* ContentView.swift */,
 				CD7A14CE25A1F310009ACE6E /* RingView.swift */,
+				CDE3F4A625A377A4003900CD /* Modifiers.swift */,
 				CDED275C2587B36C00EC61CA /* Home.swift */,
 				CDF7A32825A17F1500EDC3C2 /* AvatarView.swift */,
 				CDF7A32525A17D0400EDC3C2 /* HomeView.swift */,
@@ -170,6 +173,7 @@
 				CDBE598B25A1C422003A0C7A /* UpdateStore.swift in Sources */,
 				CDF7A32C25A19B5900EDC3C2 /* UpdateList.swift in Sources */,
 				CDF7A32925A17F1500EDC3C2 /* AvatarView.swift in Sources */,
+				CDE3F4A725A377A4003900CD /* Modifiers.swift in Sources */,
 				CDBE598825A1BFAE003A0C7A /* UpdateDetail.swift in Sources */,
 				CD7A14CF25A1F310009ACE6E /* RingView.swift in Sources */,
 				CDED27592587AB4700EC61CA /* MenuView.swift in Sources */,

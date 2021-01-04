@@ -47,18 +47,18 @@ struct HomeView: View {
                 RingView(color1: #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), color2: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
                 VStack(alignment: .leading, spacing: 4.0) {
                     Text("6 minutes left")
-                        .font(.subheadline)
-                        .fontWeight(.bold)
+                        .bold()
+                        .modifier(FontModifier(style: .subheadline))
                     Text("Watched 10 mins today")
-                        .font(.caption)
+                        .modifier(FontModifier(style: .caption))
                 }
+                .modifier(FontModifier())
                 
             }
             .padding(8)
             .background(Color.white)
             .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 20)
-            .shadow(color: Color.black.opacity(0.1), radius: 1, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 1)
+            .modifier(ShaodowMidifier())
            
             //showsIndicators 是否显示滚动条
             ScrollView (.horizontal, showsIndicators: false){
