@@ -22,3 +22,10 @@ struct FontModifier: ViewModifier {
             .font(.system(style, design: .default))
     }
 }
+
+struct CustomFontModifier: ViewModifier {
+    var size: CGFloat = 28
+    func body(content: Content) -> some View {
+        content.font(.custom("WorkSans-Bold", size: size))
+    }
+}
